@@ -26,7 +26,7 @@ def get_audio():
             said=said.lower()
             print(said)
         except Exception as e:
-            print("Ses Algılanamadı!")
+            print("Exception: "+str(e))
 
         except Exception as recognizer_instance:
             print("")
@@ -36,5 +36,5 @@ def wakeup():
     while True:
         wake=get_audio()
         if "asistan uyan" in wake:
-            speak("Dinliyorum efendim")
+            speak("Merhaba, Dinliyorum!")
             allvoices.all_voice_commands()
